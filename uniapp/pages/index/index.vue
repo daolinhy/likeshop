@@ -50,6 +50,7 @@
                 url="/pages/goods_search/goods_search"
             >
                 <u-search
+					placeholder="请输入关键字搜索"
                     wrap-bg-color="transparent"
                     :bg-color="'#fff'"
                     :disabled="true"
