@@ -140,7 +140,7 @@ CREATE TABLE `ls_admin`  (
   `create_time` int(10) NULL DEFAULT NULL COMMENT '创建时间',
   `update_time` int(10) NULL DEFAULT NULL COMMENT '修改时间',
   `login_time` int(10) NULL DEFAULT NULL COMMENT '最后登录时间',
-  `login_ip` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT '' COMMENT '最后登录ip',
+  `login_ip` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT '' COMMENT '最后登录ip',
   `disable` tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否禁用：0-否；1-是；',
   `del` tinyint(10) NOT NULL DEFAULT 0 COMMENT '0为非删除状态，非0位删除时间',
   PRIMARY KEY (`id`) USING BTREE,
@@ -2038,7 +2038,7 @@ COMMIT;
 DROP TABLE IF EXISTS `ls_stat`;
 CREATE TABLE `ls_stat`  (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `ip` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT 'IP',
+  `ip` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT 'IP',
   `count` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '次数',
   `today_user_pv` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '今日PV',
   `create_time` int(10) UNSIGNED NOT NULL COMMENT '变动时间',
@@ -2090,7 +2090,7 @@ CREATE TABLE `ls_system_log`  (
   `uri` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '访问链接',
   `type` varchar(8) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '请求方式',
   `param` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '请求数据',
-  `ip` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT 'Ip地址',
+  `ip` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT 'Ip地址',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '系统日志表';
 
@@ -2240,7 +2240,7 @@ CREATE TABLE `ls_user`  (
   `create_time` int(10) NULL DEFAULT NULL COMMENT '创建时间',
   `update_time` int(10) NULL DEFAULT NULL COMMENT '修改时间',
   `login_time` int(10) NULL DEFAULT NULL COMMENT '最后登录时间',
-  `login_ip` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT '' COMMENT '最后登录ip',
+  `login_ip` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT '' COMMENT '最后登录ip',
   `disable` tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否禁用：0-否；1-是；',
   `del` tinyint(10) NOT NULL DEFAULT 0 COMMENT '0为非删除状态，非0位删除时间',
   `user_growth` int(128) NULL DEFAULT 0 COMMENT '用户成长值',
