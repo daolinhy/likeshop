@@ -189,7 +189,7 @@ class Menu_{
             ],
             self::centre_level_serve        => [
                 'name'          => '等级服务',
-                'link'          => '/pages/user_vip/user_vip',
+                'link'          => '/bundle2/pages/user_vip/user_vip',
                 'is_tab'        => 0,
                 'link_type'     => 1,
                 'menu_type'     => 1,
