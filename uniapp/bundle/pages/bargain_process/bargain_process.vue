@@ -16,7 +16,7 @@
                 </view>
             </view>
             <view class="main">
-                <navigator class="goods-planel row" :url="'/pages/goods_details/goods_details?id=' + activityObj.goods_id" hover-class="none">
+                <navigator class="goods-planel row" :url="'/bundle/pages/goods_details/goods_details?id=' + activityObj.goods_id" hover-class="none">
                     <custom-image width="180rpx" height="180rpx" :src="activityObj.image" radius="10rpx" />
                     <view class="goods-info">
                         <view class="goods-name line2 nr">
@@ -69,7 +69,7 @@
                 </view>
             </view>
             <view class="main">
-                <navigator class="goods-planel row" :url="'/pages/goods_details/goods_details?id=' + bargainObj.goods_id" hover-class="none">
+                <navigator class="goods-planel row" :url="'/bundle/pages/goods_details/goods_details?id=' + bargainObj.goods_id" hover-class="none">
                     <custom-image width="180rpx" height="180rpx" :src="bargainObj.image" radius="10rpx" />
                     <view class="goods-info">
                         <view class="goods-name line2 nr">
@@ -465,7 +465,7 @@
             },
             toOrderDetail() {
                 uni.navigateTo({
-                    url: "/pages/order_details/order_details?id=" + this.bargainObj.order_id
+                    url: "/bundle2/pages/order_details/order_details?id=" + this.bargainObj.order_id
                 })
             },
             closeBargainOrderFun() {
@@ -491,7 +491,7 @@
                 }
                 console.log(goods, 'handleClickBuy')
                 uni.navigateTo({
-                   url: '/pages/confirm_order/confirm_order?data=' + encodeURIComponent(JSON.stringify(params)) + "&bargain_launch_id=" + this.bargainObj.id
+                   url: '/bundle2/pages/confirm_order/confirm_order?data=' + encodeURIComponent(JSON.stringify(params)) + "&bargain_launch_id=" + this.bargainObj.id
                 })
             }
         }

@@ -157,7 +157,7 @@
 			changeCate(item) {
 				if(this.cate.type === 0) {
 					uni.navigateTo({
-						url: `/pages/goods_search/goods_search?id=${item.id}&name=${item.name}&type=${item.type}`
+						url: `/bundle/pages/goods_search/goods_search?id=${item.id}&name=${item.name}&type=${item.type}`
 					})
 					return
 				}

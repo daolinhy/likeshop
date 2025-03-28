@@ -199,7 +199,7 @@ export default {
         shop_id
       } = e.currentTarget.dataset;
       uni.navigateTo({
-        url: '/pages/goods_details/goods_details?id=' + id
+        url: '/bundle/pages/goods_details/goods_details?id=' + id
       });
     },
 

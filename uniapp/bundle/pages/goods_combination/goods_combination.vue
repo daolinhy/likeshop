@@ -25,7 +25,7 @@
 		<view class="main bg-primary">
 			<view class="goods-list">
 				<navigator v-for="(item, index) in groupList" :key="index" class="goods-item row mt20 bg-white" hover-class="none"
-				 :url="'/pages/goods_details/goods_details?id=' + item.goods_id">
+				 :url="'/bundle/pages/goods_details/goods_details?id=' + item.goods_id">
 					<custom-image width="180rpx" height="180rpx" radius="6rpx" lazy-load :src="item.image"></custom-image>
 					<view class="goods-info ml20">
 						<view class="goods-name line2 mb10">{{item.name}}</view>

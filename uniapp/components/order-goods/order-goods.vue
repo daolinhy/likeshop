@@ -155,7 +155,7 @@ export default {
         toGoods(id) {
             if (!this.link) return
             uni.navigateTo({
-                url: `/pages/goods_details/goods_details?id=${id}`
+                url: `/bundle/pages/goods_details/goods_details?id=${id}`
             })
         }
     }

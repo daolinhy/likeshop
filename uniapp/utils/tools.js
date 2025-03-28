@@ -374,9 +374,9 @@ export const tabbarList = [
 ];
 // 登录注册相关
 export const acountList = [
-  "pages/login/login",
-  "pages/forget_pwd/forget_pwd",
-  "pages/register/register",
+  "/bundle2/pages/login/login",
+  "/bundle2/pages/forget_pwd/forget_pwd",
+  "/bundle2/pages/register/register",
 ];
 
 /**

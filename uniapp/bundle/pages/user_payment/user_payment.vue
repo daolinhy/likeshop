@@ -176,7 +176,7 @@
 					
 					this.rechargeInfo = data					
 					uni.navigateTo({
-						url: `/pages/payment/payment?from=${'recharge'}&order_id=${data.id}`
+						url: `/bundle2/pages/payment/payment?from=${'recharge'}&order_id=${data.id}`
 					})
 				}).catch(err => {
 					console.log(err)

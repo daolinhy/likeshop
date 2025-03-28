@@ -76,7 +76,7 @@ async function _wxMnpLogin() {
 			})
 		}
 	} else {
-		const loginRoute = '/pages/login/login'
+		const loginRoute = '/bundle2/pages/login/login'
 		if (!tabbarList.includes(route)) {
 			if(loginRoute.includes(route)) return
 			uni.navigateTo({
@@ -90,14 +90,14 @@ export const toLogin = trottle(_toLogin, 1000)
 // 去登录
 function _toLogin() {
 	uni.navigateTo({
-		url: '/pages/login/login'
+		url: '/bundle2/pages/login/login'
 	});
 	//#ifdef  H5
-	const pathLogin = 'pages/login/login'
+	const pathLogin = '/bundle2/pages/login/login'
 	let path = currentPage().route
 	if (path != pathLogin) {
 		uni.navigateTo({
-			url: '/pages/login/login'
+			url: '/bundle2/pages/login/login'
 		})
 	}
 	// #endif

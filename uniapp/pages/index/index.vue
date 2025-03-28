@@ -24,7 +24,7 @@
                     <navigator
                         class="ml20 flex1 mr20"
                         hover-class="none"
-                        url="/pages/goods_search/goods_search"
+                        url="/bundle/pages/goods_search/goods_search"
                     >
                         <u-search
                             wrap-bg-color="transparent"
@@ -40,14 +40,14 @@
         <view class="flex1 row" v-if="showLogo">
             <navigator
                 hover-class="none"
-                @tap="goPage('/bundle/pages/message_center/message_center')"
+                @tap="goPage('/bundle/pages/sub_test/sub_test')"
             >
                 <image class="icon-md ml30" src="/static/images/icon_news.png"> </image>
             </navigator>
             <navigator
                 class="ml20 flex1 mr20"
                 hover-class="none"
-                url="/pages/goods_search/goods_search"
+                url="/bundle/pages/goods_search/goods_search"
             >
                 <u-search
 					placeholder="请输入关键字搜索"
@@ -93,7 +93,7 @@
                     class="information bg-white row mt20"
                     hover-class="none"
                     open-type="navigate"
-                    url="/pages/news_list/news_list"
+                    url="/bundle2/pages/news_list/news_list"
                 >
                     <image class="icon-toutiao" src="/static/images/icon_toutiao.png"></image>
                     <text class="gap-line"></text>
@@ -564,6 +564,9 @@ export default {
 </script>
 
 <style lang="scss">
+
+	$imgurl-pre:'https://ishop.lanzixi.top/mobile/';
+
 // #ifdef H5
 ::v-deep .home-bg {
     background: url(../../static/images/bg_hometop.png) no-repeat;
@@ -760,7 +763,7 @@ export default {
     }
 
     .coupon-pop-container {
-        background-image: url(../../static/images/home_coupon_bg.png);
+        background-image: url(#{$imgurl-pre}/static/images/home_coupon_bg.png);
         width: 638rpx;
         height: 804rpx;
         background-size: 100% 100%;

@@ -1,6 +1,6 @@
 <template>
 	<view class="sort">
-		<navigator class="header" hover-class="none" url="/pages/goods_search/goods_search">
+		<navigator class="header" hover-class="none" url="/bundle/pages/goods_search/goods_search">
 			<u-search bg-color="#F4F4F4" :disabled="true"></u-search>
 		</navigator>
 		<view class="content">

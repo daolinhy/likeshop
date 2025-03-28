@@ -17,7 +17,7 @@ const baseURLMap = {
     // development: 'http://127.0.0.1:8000',
     development: 'https://shop.lanzixi.top',
     // 生产环境https://php-b2c.likeshop.cn
-    production: IS_H5 ? location.origin : ''
+    production: IS_H5 ? location.origin : 'https://shop.lanzixi.top'
 }
 
 const baseURL = SWITCH_DEVELOPMENT ? baseURLMap['development'] : baseURLMap[process.env.NODE_ENV]

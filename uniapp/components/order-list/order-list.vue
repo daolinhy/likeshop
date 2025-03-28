@@ -23,7 +23,7 @@ author: likeshop.cn.team //
         :key="index"
         hover-class="none"
         class="order-item bg-white mt20"
-        :url="'/pages/order_details/order_details?id=' + item.id"
+        :url="'/bundle2/pages/order_details/order_details?id=' + item.id"
       >
         <view class="order-header row-between">
           <view class="row">
@@ -356,7 +356,7 @@ export default {
       // this.showLoading = true
 
       uni.navigateTo({
-        url: `/pages/payment/payment?from=${"order"}&order_id=${id}`,
+        url: `/bundle2/pages/payment/payment?from=${"order"}&order_id=${id}`,
       });
 
       // prepay({

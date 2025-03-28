@@ -41,7 +41,7 @@
             class="row"
             style="padding: 20rpx"
             @tap="goPage"
-            :data-url="'/pages/goods_details/goods_details?id=' + item.goods_id"
+            :data-url="'/bundle/pages/goods_details/goods_details?id=' + item.goods_id"
           >
             <custom-image
               width="180rpx"
@@ -98,7 +98,7 @@
       <view v-if="!isLogin" class="login column-center">
         <image class="img-null" src="/static/images/cart_null.png"></image>
         <view class="muted mt20">登录后才能查看购物车哦</view>
-        <navigator class="white br60 row-center btn" url="/pages/login/login">
+        <navigator class="white br60 row-center btn" url="/bundle2/pages/login/login">
           <!-- <image class="mr10" src="/static/images/icon_wechat.png"></image> -->
           <text>去登录</text>
         </navigator>
@@ -305,7 +305,7 @@ export default {
         });
       uni.navigateTo({
         url:
-          "/pages/confirm_order/confirm_order?data=" +
+          "/bundle2/pages/confirm_order/confirm_order?data=" +
           encodeURIComponent(
             JSON.stringify({
               goods,

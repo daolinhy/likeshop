@@ -20,7 +20,7 @@
 					<view class="cate-two mt20">
 						<view v-for="(sitem, sindex) in cateTwoList" :key="sindex" class="two-item bg-white mb20">
 							<navigator class="title row-between" v-if="sitem.type == 1" hover-class="none"
-								:url="`/pages/goods_search/goods_search?id=${sitem.id}&name=${sitem.name}&type=${sitem.type}`">
+								:url="`/bundle/pages/goods_search/goods_search?id=${sitem.id}&name=${sitem.name}&type=${sitem.type}`">
 								<text class="name bold sm">{{sitem.name}}</text>
 								<u-icon name="arrow-right"></u-icon>
 							</navigator>
@@ -30,7 +30,7 @@
 							<view class="three-list row wrap">
 								<navigator v-for="(titem, tindex) in sitem.sons" :key="tindex"
 									class="three-item column-center mb20" hover-class="none"
-									:url="`/pages/goods_search/goods_search?id=${titem.id}&name=${titem.name}&type=${titem.type}`">
+									:url="`/bundle/pages/goods_search/goods_search?id=${titem.id}&name=${titem.name}&type=${titem.type}`">
 									<u-image mode="aspectFit" width="150rpx" height="150rpx" :src="titem.image">
 									</u-image>
 									<view class="text mt20 xs">{{ titem.name }}</view>

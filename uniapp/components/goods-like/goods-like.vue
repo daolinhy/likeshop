@@ -12,7 +12,7 @@
 			<scroll-view style="height: 340rpx; white-space: nowrap;" scroll-x="true" scroll-with-animation="true"
 				@scroll="scrollBarChange">
 				<navigator v-for="(item, index) in list" :key="index" hover-class="none"
-					:url="'/pages/goods_details/goods_details?id=' + item.id" class="goods-item">
+					:url="'/bundle/pages/goods_details/goods_details?id=' + item.id" class="goods-item">
 					<custom-image width="240rpx" height="240rpx" radius="10rpx" lazy-load :src="item.image">
 					</custom-image>
 					<view class="goods-name line1 mt10">{{item.name}}</view>

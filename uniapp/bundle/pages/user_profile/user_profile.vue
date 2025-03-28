@@ -344,7 +344,7 @@ export default {
                     })
                     setTimeout(() => {
                         uni.redirectTo({
-                            url: '/pages/login/login'
+                            url: '/bundle2/pages/login/login'
                         })
                     }, 500)
                 }

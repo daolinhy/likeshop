@@ -23,7 +23,7 @@
         </view>
         <view class="content">
             <view class="goods-container">
-                    <navigator v-for="(item, index) in goodsList" :key="index" :url="'/pages/goods_details/goods_details?id=' + item.id" class="goods-item bg-white row mb10" hover-class="none">
+                    <navigator v-for="(item, index) in goodsList" :key="index" :url="'/bundle/pages/goods_details/goods_details?id=' + item.id" class="goods-item bg-white row mb10" hover-class="none">
                         <view class="goods-img">
                             <custom-image width="100%" height="100%" radius="6rpx" lazy-load :src="item.image"></custom-image>
                         </view>

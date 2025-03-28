@@ -8,7 +8,7 @@
                 >
                 <navigator
                     class="comment-goods row"
-                    :url="'/pages/goods_details/goods_details?id=' + item.goods_id"
+                    :url="'/bundle/pages/goods_details/goods_details?id=' + item.goods_id"
                     hover-class="none"
                 >
                     <custom-image

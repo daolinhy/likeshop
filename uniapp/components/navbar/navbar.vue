@@ -58,7 +58,7 @@
 					icon: require('@/static/images/icon_home.png'),
 					type: 'switchTab'
 				}, {
-					url: '/pages/goods_search/goods_search',
+					url: '/bundle/pages/goods_search/goods_search',
 					name: '搜索',
 					icon: require('@/static/images/icon_search.png'),
 					type: 'navigate'

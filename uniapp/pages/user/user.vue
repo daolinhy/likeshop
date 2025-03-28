@@ -55,7 +55,7 @@
                     </view>
                 </view>
             </view>
-            <view class="member column-end" @tap="goPage('/pages/user_vip/user_vip')">
+            <view class="member column-end" @tap="goPage('/bundle2/pages/user_vip/user_vip')">
                 <view class="member-entery row-between">
                     <view class="row">
                         <image class="icon-md" src="/static/images/icon_member.png"></image>
@@ -89,7 +89,7 @@
                 </view>
                 <view
                     class="column-center mb20 assets-item"
-                    @tap="goPage('/pages/user_coupon/user_coupon')"
+                    @tap="goPage('/bundle2/pages/user_coupon/user_coupon')"
                 >
                     <view class="xl primary">{{ userInfo.coupon }}</view>
                     <view class="sm">优惠券</view>
@@ -97,7 +97,7 @@
             </view>
         </view>
         <view class="order-nav bg-white">
-            <view class="title row-between" @tap="goPage('/pages/user_order/user_order')">
+            <view class="title row-between" @tap="goPage('/bundle2/pages/user_order/user_order')">
                 <view class="lg">我的订单</view>
                 <view class="muted sm row">
                     全部订单
@@ -107,7 +107,7 @@
             <view class="nav row">
                 <view
                     class="item column-center mb20"
-                    @tap="goPage('/pages/user_order/user_order?type=pay')"
+                    @tap="goPage('/bundle2/pages/user_order/user_order?type=pay')"
                 >
                     <view class="icon-contain">
                         <view v-if="userInfo.wait_pay" class="badge xs row-center bg-white">
@@ -119,7 +119,7 @@
                 </view>
                 <view
                     class="item column-center mb20"
-                    @tap="goPage('/pages/user_order/user_order?type=delivery')"
+                    @tap="goPage('/bundle2/pages/user_order/user_order?type=delivery')"
                 >
                     <view class="icon-contain">
                         <view v-if="userInfo.wait_delivery" class="badge xs row-center bg-white">
@@ -131,7 +131,7 @@
                 </view>
                 <view
                     class="item column-center mb20"
-                    @tap="goPage('/pages/user_order/user_order?type=delivery')"
+                    @tap="goPage('/bundle2/pages/user_order/user_order?type=delivery')"
                 >
                     <view class="icon-contain">
                         <view v-if="userInfo.wait_take" class="badge xs row-center bg-white">

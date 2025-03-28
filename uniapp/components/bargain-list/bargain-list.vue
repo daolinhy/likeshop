@@ -35,7 +35,7 @@
                 <navigator hover-class="none" :url="'/bundle/pages/bargain_process/bargain_process?bargainId='+item.id" class="bargain-btn footer-btn white row-center br60" v-if="item.btn_tips != ''">
                     {{item.btn_tips}}
                 </navigator>
-                <!--                <navigator hover-class="none" class="bargain-btn white row-center br60 footer-btn" v-if="item.pay_btn" :url="'/pages/order_details/order_details?id=' + item.order_id">
+                <!--                <navigator hover-class="none" class="bargain-btn white row-center br60 footer-btn" v-if="item.pay_btn" :url="'/bundle2/pages/order_details/order_details?id=' + item.order_id">
                     去支付
                 </navigator> -->
             </view>
@@ -95,7 +95,7 @@
                     goods
                 }
                 uni.navigateTo({
-                	url: '/pages/confirm_order/confirm_order?data=' + encodeURIComponent(JSON.stringify(params)) + "&bargain_launch_id=" + bargainId
+                	url: '/bundle2/pages/confirm_order/confirm_order?data=' + encodeURIComponent(JSON.stringify(params)) + "&bargain_launch_id=" + bargainId
                 });
             }
         }
