@@ -140,6 +140,55 @@
                 <div class="layui-form-mid layui-word-aux">请补全http://或https://，例如https://static.cloud.com/</div>
             </div>
         </div>
+    {elseif $engine == 'cloudflare'}
+        <div class="layui-form-item">
+            <label class="layui-form-label">存储方式：</label>
+            <div class="layui-input-block">
+                <span class="engine_method">Cloudflare存储</span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">存储空间（Bucket）：</label>
+            <div class="layui-input-block">
+                <input type="text" name="cloudflare_bucket" value="{$storage.cloudflare.bucket}" placeholder="存储空间名称" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">所属地区（Region）：</label>
+            <div class="layui-input-block">
+                <input type="text" name="cloudflare_region" value="{$storage.cloudflare.region}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">SecretId：</label>
+            <div class="layui-input-block">
+                <input type="text" name="cloudflare_ak" value="{$storage.cloudflare.secret_id}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">SecretKey：</label>
+            <div class="layui-input-block">
+                <input type="text" name="cloudflare_sk" value="{$storage.cloudflare.secret_key}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">EndPoints：</label>
+            <div class="layui-input-block">
+                <input type="text" name="cloudflare_endpoint" value="{$storage.cloudflare.endpoint}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item" style="margin-bottom: 0;">
+            <label class="layui-form-label">空间域名（Domain）：</label>
+            <div class="layui-input-block">
+                <input type="text" name="cloudflare_domain" value="{$storage.cloudflare.domain}" placeholder="http://" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <div class="layui-input-block">
+                <div class="layui-form-mid layui-word-aux">请补全http://或https://，例如https://static.cloud.com/</div>
+            </div>
+        </div>
     {/if}
 
     <div class="layui-form-item" >

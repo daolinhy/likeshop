@@ -54,6 +54,12 @@ class StorageConfig extends AdminBase
                     'status' => $default == 'aliyun' ? 1 : 0
                 ],
                 [
+                    'name'   => 'Cloudflare',
+                    'path'   => '存储在Cloudflare，请前往阿里云开通存储服务',
+                    'engine' => 'cloudflare',
+                    'status' => $default == 'cloudflare' ? 1 : 0
+                ],
+                [
                     'name'   => '腾讯云COS',
                     'path'   => '存储在腾讯云，请前往腾讯云开通存储服务',
                     'engine' => 'qcloud',
@@ -119,6 +125,21 @@ class StorageConfig extends AdminBase
                     $this->_error('设置失败:'.$e->getMessage());
                 }
                 $this->_success('设置成功');
+            } elseif ($engine === 'cloudflare') {
+
+                try {
+                    ConfigServer::set('storage_engine', 'cloudflare', [
+                        'bucket'     => $post['cloudflare_bucket'],
+                        'region'     => $post['cloudflare_region'],
+                        'secret_id'  => $post['cloudflare_ak'],
+                        'secret_key' => $post['cloudflare_sk'],
+                        'endpoint' => $post['cloudflare_endpoint'],
+                        'domain'     => $post['cloudflare_domain']
+                    ]);
+                } catch (\Exception $e) {
+                    $this->_error('设置失败:'.$e->getMessage());
+                }
+                $this->_success('设置成功');
             }
 
             $this->_error('您设置的存储引擎不存在!');
@@ -143,6 +164,14 @@ class StorageConfig extends AdminBase
                 'region'     => '',
                 'secret_id'  => '',
                 'secret_key' => '',
+                'domain'     => 'http://'
+            ]),
+            'cloudflare' => ConfigServer::get('storage_engine', 'cloudflare', [
+                'bucket'     => '',
+                'region'     => '',
+                'secret_id'  => '',
+                'secret_key' => '',
+                'endpoint' => '',
                 'domain'     => 'http://'
             ])
         ];

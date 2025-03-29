@@ -2,14 +2,14 @@
 
 namespace app\common\server\storage\engine;
 
-use Qcloud\Cos\Client;
-
+use Aws\Credentials\Credentials;
+use Aws\S3\S3Client;
 /**
  * 腾讯云存储引擎 (COS)
  * Class Qiniu
  * @package app\common\library\storage\engine
  */
-class Qcloud extends Server
+class Cloudflare extends Server
 {
     private $config;
     private $cosClient;
@@ -32,13 +32,19 @@ class Qcloud extends Server
      */
     private function createCosClient()
     {
-        $this->cosClient = new Client([
+                
+        $credentials = new Credentials($this->config['secret_id'], $this->config['secret_key']);
+
+        $options = [
             'region' => $this->config['region'],
-            'credentials' => [
-                'secretId' => $this->config['secret_id'],
-                'secretKey' => $this->config['secret_key'],
-            ],
-        ]);
+            'endpoint' => $this->config['endpoint'],
+            'version' => 'latest',
+            'request_checksum_calculation' => 'when_required',
+            'response_checksum_validation' => 'when_required',
+            'suppress_php_deprecation_warning' => true,
+            'credentials' => $credentials
+        ];
+        $this->cosClient = new S3Client($options);
     }
 
     /**
