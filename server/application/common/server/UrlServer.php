@@ -77,7 +77,7 @@ class UrlServer
             if ($domain[strlen($domain) - 1] == '/') {
                 $domain = substr($domain,0,strlen($domain)-1);
             }
-            return $domain . $uri;
+            return $domain . ($uri=='/' ? '' : $uri);
         }
     }
 
