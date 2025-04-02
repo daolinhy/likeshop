@@ -25,9 +25,9 @@ return [
     // 端口
     'hostport'        => Env::get('database.hostport','3306'),
     // 连接dsn
-    'dsn'             => '',
+    'dsn'             => Env::get('database.dns',''),
     // 数据库连接参数
-    'params'          => [],
+    'params'          => array_filter([PDO::MYSQL_ATTR_SSL_CA=>Env::get('database.sslca','')]),
     // 数据库编码默认采用utf8
     'charset'         => 'utf8mb4',
     // 数据库表前缀
